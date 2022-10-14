@@ -43,7 +43,7 @@ app.use((err, req, res, next) => {
 });
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '../front-end/build')));
+app.use(express.static(path.join(__dirname, '/front-end/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/front-end/build/index.html`));
 });
